@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 def read_data():
         RSSFeed = feedparser.parse(
-                "https://www.upwork.com/ab/feed/jobs/rss?api_params=1&amp;orgUid=1337378355181158401&amp;paging=0%3B10&amp;q=&amp;securityToken=b3ca045a00546b0827978b274aeb245a10809a97d1f8f145bc8761c9dfdb648ed92df76358492c1aa57baa9e388323d3584f68ce096828d61273a659c9d765c7&amp;sort=recency&amp;userUid=1337378355172769792")
+                "https://www.upwork.com/ab/feed/jobs/rss?replace_with_your_rss_feed_link")
         df = pd.DataFrame()
 
         df['Date'] = [post.published for post in RSSFeed.entries]
